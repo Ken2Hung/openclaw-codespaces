@@ -5,21 +5,20 @@
     "ghcr.io/devcontainers/features/node:1": {
       "version": "20"
     },
-    "ghcr.io/devcontainers/features/git:1": {}
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
-  "postCreateCommand": "git clone https://github.com/openclaw/openclaw.git ~/openclaw && cd ~/openclaw && npm install && npm run build && npm link",
-  "forwardPorts": [
-    3000,
-    8080
-  ],
+  "postCreateCommand": "sudo npm install -g openclaw@latest && openclaw --version",
+  "forwardPorts": [18789],
   "portsAttributes": {
-    "3000": {
-      "label": "OpenClaw Web UI",
+    "18789": {
+      "label": "OpenClaw Gateway",
       "onAutoForward": "openBrowser"
-    },
-    "8080": {
-      "label": "OpenClaw API",
-      "onAutoForward": "notify"
+    }
+  },
+  "secrets": {
+    "ANTHROPIC_API_KEY": {
+      "description": "Your Anthropic API key for Claude models"
     }
   },
   "customizations": {
@@ -27,10 +26,7 @@
       "extensions": [
         "esbenp.prettier-vscode",
         "dbaeumer.vscode-eslint"
-      ],
-      "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash"
-      }
+      ]
     }
   },
   "remoteUser": "vscode"

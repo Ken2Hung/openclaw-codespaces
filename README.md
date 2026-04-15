@@ -39,8 +39,7 @@ openclaw
 
 ## 🌐 端口映射
 GitHub Codespaces 會自動將以下端口映射為公網地址：
-- **3000**: OpenClaw Web UI 主界面
-- **8080**: OpenClaw API 服務
+- **18789**: OpenClaw Web UI 主界面
 
 ## ⚙️ 環境說明
 - **安裝來源**: [github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)

@@ -3,25 +3,25 @@
 ## 🚀 快速開始
 
 ### 方法一：GitHub Codespaces（推薦）
-openclaw setup
-code ~/.openclaw/openclaw.json
-openclaw configure
-openclaw agents add project-manager
-openclaw agents add python-engineer
+openclaw setup  
+code ~/.openclaw/openclaw.json  
+openclaw configure  
+openclaw agents add project-manager  
+openclaw agents add python-engineer  
 
-openclaw gategay
+openclaw gategay  
 
-openclaw agent run --agent project-manager --message "對重構有什麼必要流程"
-openclaw agent run --agentpython-engineer --message "對重構有什麼必要流程"
+openclaw agent run --agent project-manager --message "對重構有什麼必要流程"  
+openclaw agent run --agentpython-engineer --message "對重構有什麼必要流程"  
 
-{
-        "id": "main",
-        "subagents": {
-          "allowAgents": ["proejct-manager", "python-engineer"]
-        }
-}
-
--> 規畫TODO系統重構應該有的甘特行程圖? 以及基於python coding需要知道的框架? 請呼叫project-manager agent進行行程規畫、呼叫python-engineer agent進行程式評估
+{  
+        "id": "main",  
+        "subagents": {  
+          "allowAgents": ["proejct-manager", "python-engineer"]  
+        }  
+}  
+  
+-> 規畫TODO系統重構應該有的甘特行程圖? 以及基於python coding需要知道的框架? 請呼叫project-manager agent進行行程規畫、呼叫python-engineer agent進行程式評估  
 
 ### 方法二：手動安裝（GitHub 最新版）
 在 Codespace 終端執行：

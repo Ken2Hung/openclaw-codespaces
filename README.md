@@ -3,11 +3,25 @@
 ## 🚀 快速開始
 
 ### 方法一：GitHub Codespaces（推薦）
-1. **Fork 或上傳此倉庫到你的 GitHub**
-2. **點擊綠色 "Code" 按鈕** → 選擇 "Codespaces" 標籤
-3. **點擊 "Create codespace on main"**
-4. 等待 2-3 分鐘，OpenClaw AI 將自動從 GitHub 克隆並構建最新版本
-5. 終端會顯示公網訪問地址
+openclaw setup
+code ~/.openclaw/openclaw.json
+openclaw configure
+openclaw agents add project-manager
+openclaw agents add python-engineer
+
+openclaw gategay
+
+openclaw agent run --agent project-manager --message "對重構有什麼必要流程"
+openclaw agent run --agentpython-engineer --message "對重構有什麼必要流程"
+
+{
+        "id": "main",
+        "subagents": {
+          "allowAgents": ["proejct-manager", "python-engineer"]
+        }
+}
+
+-> 規畫TODO系統重構應該有的甘特行程圖? 以及基於python coding需要知道的框架? 請呼叫project-manager agent進行行程規畫、呼叫python-engineer agent進行程式評估
 
 ### 方法二：手動安裝（GitHub 最新版）
 在 Codespace 終端執行：
@@ -23,23 +37,12 @@ npm link
 openclaw
 ```
 
-## 📋 規格配置
-| 項目 | 規格 |
-|------|------|
-| CPU | 2 核心 |
-| 記憶體 | 8 GB |
-| 硬碟 | 32 GB |
-| 免費時數 | 120 小時/月 |
-
 ## 🌐 端口映射
 GitHub Codespaces 會自動將以下端口映射為公網地址：
 - **3000**: OpenClaw Web UI 主界面
 - **8080**: OpenClaw API 服務
 
 ## ⚙️ 環境說明
-- **作業系統**: Ubuntu (Linux)
-- **Node.js**: v20.x LTS
-- **Git**: 已預裝
 - **安裝來源**: [github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)
 
 ## 🔄 更新到最新版

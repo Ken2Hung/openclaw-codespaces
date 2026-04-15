@@ -1,33 +1,10 @@
 {
-  "name": "OpenClaw AI Dev Environment",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "name": "OpenClaw Sandbox",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:24",
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-      "version": "20"
-    },
-    "ghcr.io/devcontainers/features/git:1": {},
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+    "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-  "postCreateCommand": "sudo npm install -g openclaw@latest && openclaw --version",
-  "forwardPorts": [18789],
-  "portsAttributes": {
-    "18789": {
-      "label": "OpenClaw Gateway",
-      "onAutoForward": "openBrowser"
-    }
-  },
-  "secrets": {
-    "ANTHROPIC_API_KEY": {
-      "description": "Your Anthropic API key for Claude models"
-    }
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "esbenp.prettier-vscode",
-        "dbaeumer.vscode-eslint"
-      ]
-    }
-  },
-  "remoteUser": "vscode"
+  "postCreateCommand": "curl -fsSL https://openclaw.ai/install.sh | bash",
+  "remoteEnv": {
+  }
 }

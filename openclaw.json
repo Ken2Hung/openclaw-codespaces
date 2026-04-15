@@ -1,0 +1,31 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "/home/node/.openclaw/workspace"
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "bind": "127.0.0.1",
+    "auth": {
+      "mode": "none"
+    },
+    "controlUi": {
+      "allowedOrigins": [
+        "http://localhost:18789",
+        "http://127.0.0.1:18789",
+        "*"
+      ]
+    },
+    "trustedProxies": [
+      "127.0.0.1", 
+      "::ffff:127.0.0.1"
+    ]
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.4.14",
+    "lastTouchedAt": "2026-04-15T01:12:44.607Z"
+  }
+}
+
+

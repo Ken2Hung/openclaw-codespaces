@@ -4,7 +4,7 @@
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-  "postCreateCommand": "sudo npm install -g openclaw@latest && openclaw --version",
+  "postCreateCommand": "git clone https://github.com/openclaw/openclaw.git ~/openclaw && cd ~/openclaw && npm install",
   "remoteEnv": {
   }
 }

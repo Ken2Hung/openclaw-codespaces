@@ -4,7 +4,7 @@
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-  "postCreateCommand": "curl -fsSL https://openclaw.ai/install.sh | bash",
+  "postCreateCommand": "sudo npm install -g openclaw@latest && openclaw --version",
   "remoteEnv": {
   }
 }

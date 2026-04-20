@@ -22,6 +22,8 @@ openclaw agent run --agentpython-engineer --message "對重構有什麼必要流
 }  
   
 -> 規畫TODO系統重構應該有的甘特行程圖? 以及基於python coding需要知道的框架? 請呼叫project-manager agent進行行程規畫、呼叫python-engineer agent進行程式評估  
+-> restart手動
+npx kill-port 18789 18791
 
 ### 方法二：手動安裝（GitHub 最新版）
 在 Codespace 終端執行：

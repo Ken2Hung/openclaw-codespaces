@@ -11,8 +11,8 @@ openclaw agents add python-engineer
 
 openclaw gateway  
 
-openclaw agent run --agent project-manager --message "對重構有什麼必要流程"  
-openclaw agent run --agentpython-engineer --message "對重構有什麼必要流程"  
+openclaw agent --agent project-manager --message "對重構有什麼必要流程"  
+openclaw agent --agent python-engineer --message "對重構有什麼必要流程"  
 
 {  
         "id": "main",  

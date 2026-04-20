@@ -9,7 +9,7 @@ openclaw configure
 openclaw agents add project-manager  
 openclaw agents add python-engineer  
 
-openclaw gategay  
+openclaw gateway  
 
 openclaw agent run --agent project-manager --message "對重構有什麼必要流程"  
 openclaw agent run --agentpython-engineer --message "對重構有什麼必要流程"  
